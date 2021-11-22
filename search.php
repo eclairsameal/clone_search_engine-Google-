@@ -1,10 +1,17 @@
 <?php
     if(isset($_GET['term'])){
         $term = $_GET['term'];
-    }else{
+    } else {
         exit("You must enter a search term");
     } 
-    
+    /*
+    if(isset($_GET['type'])){
+        $type = $_GET['sites'];
+    } else {
+        $type = "sites" ;
+    }*/
+    $type = isset($_GET['type']) ? $_GET['sites'] : "sites";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,6 +49,7 @@
             <div class="tabsContainer">
                 <ul class="tabList">
                     <li>
+                        <!--用單引號「'」是因為裡面的PHP需要用到「"」-->
                         <a href='<?php echo "search.php?term=$term&type=sites"; ?>'>
                             Sites
                         </a>
