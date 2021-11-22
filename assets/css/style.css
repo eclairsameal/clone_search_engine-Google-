@@ -1,26 +1,76 @@
 *{
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;  /*預設字型,Arial沒有的話會用sans-serif*/
     color: #545454;
 }
 
 html,
-body{
+body {
     margin: 0;
     height: 100%;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100%;
 }
 
-.wrapper.indexPage{
+.wrapper.indexPage {
     justify-content: center;
 }
 
-.mainSection{
+.mainSection {
     display: flex;
     flex-direction: column;
     align-items: center;    
+}
+
+.mainSection .searchContainer {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.mainSection .searchContainer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.searchContainer .searchButton{
+    color: #757575;
+    background-color: #f5f5f5;
+    border: none;  /*邊框*/
+    height: 36px;
+    width: 125px;
+    border-radius: 1px; /*讓周圍有輕微角度*/
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px; 
+    cursor: pointer; /*鼠標指針放在一個元素邊界範圍內時所用的光標形狀*/
+    outline: none; /*輪廓（outline）是繪製於元素周圍的一條線，位於邊框邊緣的外圍，可起到突出元素的作用。*/
+}
+
+.mainSection .searchContainer .searchBox{
+	border: none;
+    box-shadow: 
+        0 2px 2px 0 rgba(0,0,0,0.16), 
+        0 0 0 1px rgba(0,0,0,0.08); /*陰影效果*/
+    height: 44px;
+    border-radius: 2px;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 70%;
+    max-width: 630px;
+    color: #000;
+}
+
+.mainSection .logoContainer{
+    width: 220px;
+    text-align: center;
+}
+
+.logoContainer img{
+    width: 100%;
 }
