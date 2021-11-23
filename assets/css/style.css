@@ -153,6 +153,18 @@ body {
     color: #777;
     font-size: 13px;
 }
+
 .tabsContainer .tabList li a {
     text-decoration: none; /* 移除連結會有的底線 */
+}
+
+/* 讓被選中的tab變色 */
+
+.tabsContainer .tabList li.active {
+    border-bottom: 3px solid #1A73E8;
+}
+
+.tabsContainer .tabList li.active a {
+    font-weight: bold;
+    color: #1A73E8;
 }

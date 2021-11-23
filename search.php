@@ -10,7 +10,7 @@
     } else {
         $type = "sites" ;
     }*/
-    $type = isset($_GET['type']) ? $_GET['sites'] : "sites";
+    $type = isset($_GET['type']) ? $_GET['type'] : "sites";
 
 ?>
 <!DOCTYPE html>
@@ -48,13 +48,13 @@
 
             <div class="tabsContainer">
                 <ul class="tabList">
-                    <li>
+                    <li class="<?php echo $type == 'sites' ? 'active':''?>">
                         <!--用單引號「'」是因為裡面的PHP需要用到「"」-->
                         <a href='<?php echo "search.php?term=$term&type=sites"; ?>'>
                             Sites
                         </a>
                     </li>
-                    <li>
+                    <li class="<?php echo $type == 'images' ? 'active':''?>">
                         <a href='<?php echo "search.php?term=$term&type=images"; ?>'>
                             Images
                         </a>
