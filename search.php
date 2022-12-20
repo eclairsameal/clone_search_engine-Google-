@@ -1,7 +1,7 @@
 <?php
     if(isset($_GET['term'])){
         $term = $_GET['term'];
-    } else {
+    } else {  // 沒有輸入值的話
         exit("You must enter a search term");
     } 
     /*
